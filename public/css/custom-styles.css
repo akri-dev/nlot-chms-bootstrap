@@ -1,0 +1,43 @@
+.login-logo, .register-logo {
+    margin-bottom: 0 !important;
+}
+
+.login-page, .register-page {
+    background-color: #fff;
+    background-image: url('../img/nlot-background-1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-box, .register-box {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 23px;
+    border-top: 0;
+    color: #666;
+    border-radius: 8px;
+    backdrop-filter: blur(10px) saturate(168%);
+    width: 450px !important;
+}
+
+.password-container {
+    position: relative; /* Set the wrapper as the reference for the icon */
+}
+
+.password-container .form-control {
+    padding-right: 40px; /* Make space for the icon so text doesn't go underneath it */
+}
+
+.password-toggle-icon {
+    position: absolute; /* Position the icon relative to the wrapper */
+    right: 15px; /* Adjust as needed to position the icon */
+    top: 50%; /* Vertically center the icon */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    cursor: pointer; /* Change cursor to a pointer on hover */
+    z-index: 100; /* Ensure the icon appears on top of the input */
+    color: #6c757d; /* Use a color that fits the AdminLTE theme */
+    opacity: 0.25;
+}
+
+.form-control {
+    border-radius: .25rem !important;    
+}

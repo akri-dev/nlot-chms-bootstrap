@@ -20,6 +20,7 @@
 @section('adminlte_css')
     @stack('css')
     @yield('css')
+    
 @stop
 
 @section('classes_body'){{ $bodyClasses }}@stop
@@ -50,34 +51,36 @@
                 @endif
 
                 {{-- Logo Label --}}
-                {!! config('adminlte.logo', '<b>Admin</b>LTE') !!}
+                {{-- {!! config('adminlte.logo', '<b>Admin</b>LTE') !!} --}}
 
             </a>
         </div>
 
+        <div class="{{ config('adminlte.classes_auth_body', '') }}">
+            @yield('auth_body')
+        </div>
+
         {{-- Card Box --}}
-        <div class="card {{ config('adminlte.classes_auth_card', 'card-outline card-primary') }}">
+        {{-- <div class="card {{ config('adminlte.classes_auth_card', 'card-outline card-primary') }}"> --}}
 
             {{-- Card Header --}}
-            @hasSection('auth_header')
+            {{-- @hasSection('auth_header')
                 <div class="card-header {{ config('adminlte.classes_auth_header', '') }}">
                     <h3 class="card-title float-none text-center">
                         @yield('auth_header')
                     </h3>
                 </div>
-            @endif
+            @endif --}}
 
             {{-- Card Body --}}
-            <div class="card-body {{ $authType }}-card-body {{ config('adminlte.classes_auth_body', '') }}">
-                @yield('auth_body')
-            </div>
+            
 
             {{-- Card Footer --}}
-            @hasSection('auth_footer')
+            {{-- @hasSection('auth_footer')
                 <div class="card-footer {{ config('adminlte.classes_auth_footer', '') }}">
                     @yield('auth_footer')
                 </div>
-            @endif
+            @endif --}}
 
         </div>
 
